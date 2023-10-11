@@ -1,16 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Work Sans", sans-serif;
 }
 .infor {
     width: 50%;
     margin: 0 auto;
 }
+
 .infor img {
     width: 200px;
     border-radius: 50%;
@@ -19,6 +20,9 @@ body {
     font-size: 30px;
     margin-bottom: 15px;
     font-family: "Dancing Script", cursive;
+}
+.infor audio {
+    margin-top: 30px;
 }
 .infor .number {
     color: #f60;
@@ -31,15 +35,48 @@ body {
     padding: 30px 0;
 }
 .infor .menu li {
+    position: relative;
     display: inline-block;
     margin-right: 30px;
     font-weight: 400;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.infor .menu li:hover {
+    color: #f60;
+}
+.infor .menu li .submenu {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    padding: 10px 20px;
+    display: grid;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.infor .menu li:first-child:hover .submenu {
+    opacity: 1;
+    top: 40px;
+    visibility: visible;
+}
+.infor .menu li .submenu li {
+    width: 120px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    transition: 0.5s;
+    color: #000;
+}
+.infor .menu li .submenu li:hover {
+    color: #f60;
 }
 .infor .about {
     background-color: rgb(255, 240, 221);
     border-radius: 20px;
     padding: 30px;
-    margin-top: 30px;
+    margin: 10px 0;
 }
 .infor .about h2 {
     text-align: center;
@@ -50,20 +87,32 @@ body {
     text-align: center;
     margin-bottom: 10px;
 }
-.infor .about a {
+.infor .about button {
     background-color: bisque;
     display: block;
     text-align: center;
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    margin-bottom: 20px;
     padding: 10px;
     border-radius: 10px;
 }
-.infor .about ul {
+.infor .about .menusecond {
     list-style: none;
     margin-top: 10px;
 }
-.infor .about ul li {
+
+.infor .about .menusecond li {
     margin-bottom: 10px;
 }
-.infor .about ul li i {
+.infor .about .menusecond li i {
     color: #f60;
+}
+.infor audio {
+    margin-bottom: 20px;
+}
+.infor iframe {
+    border-radius: 10px;
+    border: none;
 }
